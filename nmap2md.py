@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import re
+import os
 import sys
 import xml.etree.ElementTree as ET
 from optparse import OptionParser
@@ -126,10 +127,11 @@ for host in tree.getroot().findall("host"):
 
 # Start converting data to Markdown
 # IP addresses are defined as a header
+os.system("mkdir subnet")
 for address in result:
     if not options.print_empty and len(result[address]) == 0:
         continue
-
+    os.system("mkdir subnet/%s" % address)
     if options.hs != 0:
         md += "%s %s\n\n" % ('#' * options.hs, address)
     md += "| %s |" % " | ".join(columns)
@@ -146,11 +148,14 @@ for address in result:
     )
 
     for port_info in result[address]:
+        os.system("echo '' > 'subnet/%s/%s.md'" % (address,"_".join(port_info).replace("/","_").replace("*", "")[:-2]))
+        #print("subnet/%s/%s" % (address,"_".join(port_info).replace("/","_").replace("*", "")[:-2]))
         md += "| %s |" % " | ".join(port_info)
-        md += "\n"
+        md += "\n" 
 
     md += "\n\n"
 
-print()
-print()
-print(md)
+#print(md)
+text_file = open("subnet/overview.md", "w")
+n = text_file.write(md)
+text_file.close()
