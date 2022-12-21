@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Sat Nov 26 07:57:06 2022 as: nmap -vvv -p 21,22,25,80,111,139,143,199,443,3306,32768,45295 -Pn -A -sS -sV -oX nmap_results.xml -&#45;append-output 10.11.1.115 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 21,22,25,80,111,139,143,199,443,3306,32768,45295 -Pn -A -sS -sV -oX nmap_results.xml -&#45;append-output 10.11.1.115" start="1669467426" startstr="Sat Nov 26 07:57:06 2022" version="7.93" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="12" services="21-22,25,80,111,139,143,199,443,3306,32768,45295"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1669467428"/>
+<taskend task="NSE" time="1669467428"/>
+<taskbegin task="NSE" time="1669467428"/>
+<taskend task="NSE" time="1669467428"/>
+<taskbegin task="NSE" time="1669467428"/>
+<taskend task="NSE" time="1669467428"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1669467428"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1669467428"/>
+<taskbegin task="SYN Stealth Scan" time="1669467428"/>
+<taskend task="SYN Stealth Scan" time="1669467428" extrainfo="12 total ports"/>
+<taskbegin task="Service scan" time="1669467429"/>
+<taskend task="Service scan" time="1669467593" extrainfo="12 services on 1 host"/>
+<taskbegin task="Traceroute" time="1669467598"/>
+<taskend task="Traceroute" time="1669467598"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1669467598"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1669467598"/>
+<taskbegin task="NSE" time="1669467598"/>
+<taskprogress task="NSE" time="1669467629" percent="99.94" remaining="1" etc="1669467629"/>
+<taskend task="NSE" time="1669467630"/>
+<taskbegin task="NSE" time="1669467630"/>
+<taskprogress task="NSE" time="1669467661" percent="97.00" remaining="1" etc="1669467662"/>
+<taskprogress task="NSE" time="1669467691" percent="97.00" remaining="2" etc="1669467693"/>
+<taskend task="NSE" time="1669467698"/>
+<taskbegin task="NSE" time="1669467698"/>
+<taskend task="NSE" time="1669467698"/>
+<host starttime="1669467428" endtime="1669467698"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.115" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="1.1.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:1.1.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxr-xr-x    2 0        0            4096 Feb 28  2003 pub"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="3.5p1" extrainfo="protocol 1.99" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:3.5p1</cpe></service><script id="sshv1" output="Server supports SSHv1">true</script><script id="ssh-hostkey" output="&#xa;  1024 3670a49f3247ac573fefa1ec0bba441b (RSA1)&#xa;1024 35 120344514349960813598898192027051396627887361763055222531835318733333615953493686001723539273400706470352667805953391089140752629026037361205964117661230023762517804970080908830946119043695303514789760902093478918957609252029683456537906417915831994981012299156668111566131900536256194903202189869782287739911&#xa;  1024 64797dc6a2633254f0d92bf35dc7d269 (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAOcEG/6o3Sbn7OVFCeti3eKK4f4lhwAEykhVfB3yt0cRvOvJWHwlrbtNiqXzg8nEcIKEfCf9t1r7Nl50oxr82NOf5xYgZ6EFwsHoomEqmJn5P1Rzf4NdnoQwhEKjcGBNODZgo3ehL0YVvhcpEeTs/QNxHtOU9u+0mE1BE/hNXzjhAAAAFQCsI9EINYsU2RfINgpvY0fBOddU4wAAAIAWg+jjwpiZYVvJwj0+EhiKxF+xNbjKYiMPAGKdv+IMsW+CltGWww/l5qFMimEEIRG34jqR1VSl7BrJTnUouNRO8ZV0VLYYnMPSRaEyYluWEhHRLyf/TPdqDqPsa7yw1mBQKTKOKVLfwMa/1wIbFxo11CrFVluMT47jhL1BQaI6pQAAAIBDjo0gHWj84nO4SMVNT1cIFSB8aonZSV3QYIM1zxteI/MGRrMJyeFA4uggC6Cjrnu5m3LXeY5Q3kZJtGfMGbCvE+hmGc3+zvyUZVDAff4/7Aeq1BXDyv47TskyFM5qdq0rlxOPGw9S1xCuXx9VcLI0BejpjKARu30mSmCpsRjgoQ==&#xa;  1024 48fb393d308250de6669c5ca4562c0dc (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEA5taj5xQpdm92zd3E7FT1yu0euGgCdQwslVCN6pryfuMqGRZ1Y6VTSk8pNcMYzI3Q0ZA7vlyob4+zVAtM4ofFczNMW8OUwScCyQg28tp2EpncMb8tNr52tbn8ohsFfRXgFdSzJWJ22dYduPSLVDK2EvQREq5q7do8Z4EWgWUcYcM="><table>
+<elem key="bits">1024</elem>
+<elem key="key">35 120344514349960813598898192027051396627887361763055222531835318733333615953493686001723539273400706470352667805953391089140752629026037361205964117661230023762517804970080908830946119043695303514789760902093478918957609252029683456537906417915831994981012299156668111566131900536256194903202189869782287739911</elem>
+<elem key="type">rsa1</elem>
+<elem key="fingerprint">3670a49f3247ac573fefa1ec0bba441b</elem>
+</table>
+<table>
+<elem key="bits">1024</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAOcEG/6o3Sbn7OVFCeti3eKK4f4lhwAEykhVfB3yt0cRvOvJWHwlrbtNiqXzg8nEcIKEfCf9t1r7Nl50oxr82NOf5xYgZ6EFwsHoomEqmJn5P1Rzf4NdnoQwhEKjcGBNODZgo3ehL0YVvhcpEeTs/QNxHtOU9u+0mE1BE/hNXzjhAAAAFQCsI9EINYsU2RfINgpvY0fBOddU4wAAAIAWg+jjwpiZYVvJwj0+EhiKxF+xNbjKYiMPAGKdv+IMsW+CltGWww/l5qFMimEEIRG34jqR1VSl7BrJTnUouNRO8ZV0VLYYnMPSRaEyYluWEhHRLyf/TPdqDqPsa7yw1mBQKTKOKVLfwMa/1wIbFxo11CrFVluMT47jhL1BQaI6pQAAAIBDjo0gHWj84nO4SMVNT1cIFSB8aonZSV3QYIM1zxteI/MGRrMJyeFA4uggC6Cjrnu5m3LXeY5Q3kZJtGfMGbCvE+hmGc3+zvyUZVDAff4/7Aeq1BXDyv47TskyFM5qdq0rlxOPGw9S1xCuXx9VcLI0BejpjKARu30mSmCpsRjgoQ==</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="fingerprint">64797dc6a2633254f0d92bf35dc7d269</elem>
+</table>
+<table>
+<elem key="bits">1024</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAIEA5taj5xQpdm92zd3E7FT1yu0euGgCdQwslVCN6pryfuMqGRZ1Y6VTSk8pNcMYzI3Q0ZA7vlyob4+zVAtM4ofFczNMW8OUwScCyQg28tp2EpncMb8tNr52tbn8ohsFfRXgFdSzJWJ22dYduPSLVDK2EvQREq5q7do8Z4EWgWUcYcM=</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">48fb393d308250de6669c5ca4562c0dc</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smtp" method="table" conf="3"/><script id="smtp-commands" output="Couldn&apos;t establish connection on port 25"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.0.40" extrainfo="(Red Hat Linux)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.0.40</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.0.40 (Red Hat Linux)"><elem>Apache/2.0.40 (Red Hat Linux)</elem>
+</script><script id="http-title" output="Test Page for the Apache Web Server on Red Hat Linux"><elem key="title">Test Page for the Apache Web Server on Red Hat Linux</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2            111/tcp   rpcbind&#xa;  100000  2            111/udp   rpcbind&#xa;  100024  1          32768/tcp   status&#xa;  100024  1          32768/udp   status&#xa;  391002  2          32769/tcp   sgi_fam&#xa;"><table key="391002">
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+</table>
+<elem key="port">32769</elem>
+</table>
+</table>
+<table key="100024">
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">32768</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">32768</elem>
+</table>
+</table>
+<table key="100000">
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" extrainfo="workgroup: MYGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="imap" product="UW imapd" version="2001.315rh" hostname="tophat.acme.local" method="probed" conf="10"><cpe>cpe:/a:uw:imap_toolkit:2001.315rh</cpe></service><script id="imap-capabilities" output="NAMESPACE completed SORT MAILBOX-REFERRALS THREAD=ORDEREDSUBJECT OK IMAP4REV1 MULTIAPPEND CAPABILITY THREAD=REFERENCES IDLE STARTTLS SCAN AUTH=LOGINA0001 LOGIN-REFERRALS"/><script id="ssl-date" output="2022-11-26T14:00:48+00:00; +1h00m10s from scanner time."><elem key="date">2022-11-26T14:00:48+00:00</elem>
+<elem key="delta">3610.0</elem>
+</script></port>
+<port protocol="tcp" portid="199"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smux" product="Linux SNMP multiplexer" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="https" product="Apache/2.0.40 (Red Hat Linux)" tunnel="ssl" method="probed" conf="10"/><script id="ssl-cert" output="Subject: commonName=redhat/organizationName=ACME LOCAL LTD/stateOrProvinceName=Berkshire/countryName=GB/emailAddress=bob@acme.com/localityName=Newbury/organizationalUnitName=MARKETING&#xa;Issuer: commonName=redhat/organizationName=ACME LOCAL LTD/stateOrProvinceName=Berkshire/countryName=GB/emailAddress=bob@acme.com/localityName=Newbury/organizationalUnitName=MARKETING&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: md5WithRSAEncryption&#xa;Not valid before: 2007-01-16T14:54:43&#xa;Not valid after:  2008-01-16T14:54:43&#xa;MD5:   e900ada0dfea040806cdddee15fd7d8b&#xa;SHA-1: 3b9a70e7870e11b8a2215af7bae9dd03ce903cbc&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQQFADCBjjELMAkGA1UEBhMCR0Ix&#xa;EjAQBgNVBAgTCUJlcmtzaGlyZTEQMA4GA1UEBxMHTmV3YnVyeTEXMBUGA1UEChMO&#xa;QUNNRSBMT0NBTCBMVEQxEjAQBgNVBAsTCU1BUktFVElORzEPMA0GA1UEAxMGcmVk&#xa;aGF0MRswGQYJKoZIhvcNAQkBFgxib2JAYWNtZS5jb20wHhcNMDcwMTE2MTQ1NDQz&#xa;WhcNMDgwMTE2MTQ1NDQzWjCBjjELMAkGA1UEBhMCR0IxEjAQBgNVBAgTCUJlcmtz&#xa;aGlyZTEQMA4GA1UEBxMHTmV3YnVyeTEXMBUGA1UEChMOQUNNRSBMT0NBTCBMVEQx&#xa;EjAQBgNVBAsTCU1BUktFVElORzEPMA0GA1UEAxMGcmVkaGF0MRswGQYJKoZIhvcN&#xa;AQkBFgxib2JAYWNtZS5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMRD&#xa;0vy4uZz1lnlfh2bzTgArxS0sdOjdJh06Zd3dXmP9bTZwEimXZ1K6fg0wa+qmuTfn&#xa;eKdDsFVUbAl5Ecx5ovbxPfA6RwlTeLJ9E+I1ugizHasFZYM0/xmzUl4FEftVfgPa&#xa;0uuKX8Z+RkzBajHLj0clotgmQPn719o/tgHU8DpxAgMBAAGjge4wgeswHQYDVR0O&#xa;BBYEFGijV7H5GV+Il9uGefjvjTDSxc4JMIG7BgNVHSMEgbMwgbCAFGijV7H5GV+I&#xa;l9uGefjvjTDSxc4JoYGUpIGRMIGOMQswCQYDVQQGEwJHQjESMBAGA1UECBMJQmVy&#xa;a3NoaXJlMRAwDgYDVQQHEwdOZXdidXJ5MRcwFQYDVQQKEw5BQ01FIExPQ0FMIExU&#xa;RDESMBAGA1UECxMJTUFSS0VUSU5HMQ8wDQYDVQQDEwZyZWRoYXQxGzAZBgkqhkiG&#xa;9w0BCQEWDGJvYkBhY21lLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEB&#xa;BAUAA4GBAHN9rvmYb0fJjcs8eI6p0uheZAQ2OvQ7UunSCpWsFAwLQC6oi7IYhMcp&#xa;+DGB0RweEQnhZyyf9HA81WtpLK7vyGIZotFqxfQMEBZa5iGObZHoyY3pWTXElKMx&#xa;aRN/IulZMXFWw66x9+sh0RlNHBIKluH5cLzRWuH5jXnSQ9rJGSi2&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">redhat</elem>
+<elem key="countryName">GB</elem>
+<elem key="emailAddress">bob@acme.com</elem>
+<elem key="localityName">Newbury</elem>
+<elem key="organizationName">ACME LOCAL LTD</elem>
+<elem key="organizationalUnitName">MARKETING</elem>
+<elem key="stateOrProvinceName">Berkshire</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">redhat</elem>
+<elem key="countryName">GB</elem>
+<elem key="emailAddress">bob@acme.com</elem>
+<elem key="localityName">Newbury</elem>
+<elem key="organizationName">ACME LOCAL LTD</elem>
+<elem key="organizationalUnitName">MARKETING</elem>
+<elem key="stateOrProvinceName">Berkshire</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C443D2FCB8B99CF596795F8766F34E002BC52D2C74E8DD261D3A65DDDD5E63FD6D36701229976752BA7E0D306BEAA6B937E778A743B055546C097911CC79A2F6F13DF03A47095378B27D13E235BA08B31DAB05658334FF19B3525E0511FB557E03DAD2EB8A5FC67E464CC16A31CB8F4725A2D82640F9FBD7DA3FB601D4F03A71</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">68:A3:57:B1:F9:19:5F:88:97:DB:86:79:F8:EF:8D:30:D2:C5:CE:09</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:68:A3:57:B1:F9:19:5F:88:97:DB:86:79:F8:EF:8D:30:D2:C5:CE:09&#xa;DirName:/C=GB/ST=Berkshire/L=Newbury/O=ACME LOCAL LTD/OU=MARKETING/CN=redhat/emailAddress=bob@acme.com&#xa;serial:00</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">md5WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2007-01-16T14:54:43</elem>
+<elem key="notAfter">2008-01-16T14:54:43</elem>
+</table>
+<elem key="md5">e900ada0dfea040806cdddee15fd7d8b</elem>
+<elem key="sha1">3b9a70e7870e11b8a2215af7bae9dd03ce903cbc</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQQFADCBjjELMAkGA1UEBhMCR0Ix&#xa;EjAQBgNVBAgTCUJlcmtzaGlyZTEQMA4GA1UEBxMHTmV3YnVyeTEXMBUGA1UEChMO&#xa;QUNNRSBMT0NBTCBMVEQxEjAQBgNVBAsTCU1BUktFVElORzEPMA0GA1UEAxMGcmVk&#xa;aGF0MRswGQYJKoZIhvcNAQkBFgxib2JAYWNtZS5jb20wHhcNMDcwMTE2MTQ1NDQz&#xa;WhcNMDgwMTE2MTQ1NDQzWjCBjjELMAkGA1UEBhMCR0IxEjAQBgNVBAgTCUJlcmtz&#xa;aGlyZTEQMA4GA1UEBxMHTmV3YnVyeTEXMBUGA1UEChMOQUNNRSBMT0NBTCBMVEQx&#xa;EjAQBgNVBAsTCU1BUktFVElORzEPMA0GA1UEAxMGcmVkaGF0MRswGQYJKoZIhvcN&#xa;AQkBFgxib2JAYWNtZS5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMRD&#xa;0vy4uZz1lnlfh2bzTgArxS0sdOjdJh06Zd3dXmP9bTZwEimXZ1K6fg0wa+qmuTfn&#xa;eKdDsFVUbAl5Ecx5ovbxPfA6RwlTeLJ9E+I1ugizHasFZYM0/xmzUl4FEftVfgPa&#xa;0uuKX8Z+RkzBajHLj0clotgmQPn719o/tgHU8DpxAgMBAAGjge4wgeswHQYDVR0O&#xa;BBYEFGijV7H5GV+Il9uGefjvjTDSxc4JMIG7BgNVHSMEgbMwgbCAFGijV7H5GV+I&#xa;l9uGefjvjTDSxc4JoYGUpIGRMIGOMQswCQYDVQQGEwJHQjESMBAGA1UECBMJQmVy&#xa;a3NoaXJlMRAwDgYDVQQHEwdOZXdidXJ5MRcwFQYDVQQKEw5BQ01FIExPQ0FMIExU&#xa;RDESMBAGA1UECxMJTUFSS0VUSU5HMQ8wDQYDVQQDEwZyZWRoYXQxGzAZBgkqhkiG&#xa;9w0BCQEWDGJvYkBhY21lLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEB&#xa;BAUAA4GBAHN9rvmYb0fJjcs8eI6p0uheZAQ2OvQ7UunSCpWsFAwLQC6oi7IYhMcp&#xa;+DGB0RweEQnhZyyf9HA81WtpLK7vyGIZotFqxfQMEBZa5iGObZHoyY3pWTXElKMx&#xa;aRN/IulZMXFWw66x9+sh0RlNHBIKluH5cLzRWuH5jXnSQ9rJGSi2&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-server-header" output="Apache/2.0.40 (Red Hat Linux)"><elem>Apache/2.0.40 (Red Hat Linux)</elem>
+</script><script id="sslv2" output="&#xa;  SSLv2 supported&#xa;  ciphers: &#xa;    SSL2_DES_192_EDE3_CBC_WITH_MD5&#xa;    SSL2_RC2_128_CBC_WITH_MD5&#xa;    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5&#xa;    SSL2_RC4_128_EXPORT40_WITH_MD5&#xa;    SSL2_RC4_64_WITH_MD5&#xa;    SSL2_RC4_128_WITH_MD5&#xa;    SSL2_DES_64_CBC_WITH_MD5"><elem>SSLv2 supported</elem>
+<table key="ciphers">
+<elem>SSL2_DES_192_EDE3_CBC_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_RC4_128_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_RC4_64_WITH_MD5</elem>
+<elem>SSL2_RC4_128_WITH_MD5</elem>
+<elem>SSL2_DES_64_CBC_WITH_MD5</elem>
+</table>
+</script><script id="http-title" output="Bad request!"><elem key="title">Bad request!</elem>
+</script><script id="ssl-date" output="2022-11-26T14:00:40+00:00; +1h00m10s from scanner time."><elem key="date">2022-11-26T14:00:40+00:00</elem>
+<elem key="delta">3610.0</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" product="MySQL" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql</cpe></service></port>
+<port protocol="tcp" portid="32768"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="45295"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="unknown" servicefp="SF-Port45295-TCP:V=7.93%I=7%D=11/26%Time=63820D30%P=x86_64-pc-linux-gnu%r(GenericLines,4E,&quot;/bin//sh:\x20line\x201:\x20\r:\x20command\x20not\x20found\n/bin//sh:\x20line\x202:\x20\r:\x20command\x20not\x20found\n&quot;)%r(GetRequest,2E,&quot;Can&apos;t\x20ignore\x20signal\x20CHLD,\x20forcing\x20to\x20default\.\n&quot;)%r(HTTPOptions,54,&quot;/bin//sh:\x20line\x201:\x20OPTIONS:\x20command\x20not\x20found\n/bin//sh:\x20line\x202:\x20\r:\x20command\x20not\x20found\n&quot;)%r(RTSPRequest,54,&quot;/bin//sh:\x20line\x201:\x20OPTIONS:\x20command\x20not\x20found\n/bin//sh:\x20line\x202:\x20\r:\x20command\x20not\x20found\n&quot;)%r(Help,2B,&quot;/bin//sh:\x20line\x201:\x20HELP\r:\x20command\x20not\x20found\n&quot;)%r(TerminalServerCookie,31,&quot;/bin//sh:\x20line\x201:\x20\x03\*%\xe0Cookie::\x20command\x20not\x20found\n&quot;)%r(TLSSessionReq,57,&quot;/bin//sh:\x20line\x201:\x20\x16\x03i\x01e\x03\x03U\x1c\xa7\xe4random1random2random3random4\x0c/:\x20No\x20such\x20file\x20or\x20directory\n&quot;)%r(Kerberos,36,&quot;/bin//sh:\x20line\x201:\x20qj\x81n0\x81k\xa1\x03\x02\x01\x05\xa2\x03\x02\x01:\x20command\x20not\x20found\n&quot;)%r(FourOhFourRequest,2E,&quot;Can&apos;t\x20ignore\x20signal\x20CHLD,\x20forcing\x20to\x20default\.\n&quot;)%r(LPDString,2E,&quot;/bin//sh:\x20line\x201:\x20\x01default:\x20command\x20not\x20found\n&quot;)%r(LDAPSearchReq,57,&quot;/bin//sh:\x20line\x201:\x200\x84-\x02\x01\x07c\x84\$\x04:\x20command\x20not\x20found\n/bin//sh:\x20line\x202:\x20\x01:\x20command\x20not\x20found\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, GetRequest: &#xa;    Can&apos;t ignore signal CHLD, forcing to default.&#xa;  GenericLines: &#xa;    /bin//sh: line 1: &#xa;    command not found&#xa;    /bin//sh: line 2: &#xa;    command not found&#xa;  HTTPOptions, RTSPRequest: &#xa;    /bin//sh: line 1: OPTIONS: command not found&#xa;    /bin//sh: line 2: &#xa;    command not found&#xa;  Help: &#xa;    /bin//sh: line 1: HELP&#xa;    command not found&#xa;  Kerberos: &#xa;    /bin//sh: line 1: qj&#xa;    command not found&#xa;  LDAPSearchReq: &#xa;    /bin//sh: line 1: 0&#xa;    command not found&#xa;    /bin//sh: line 2: &#xa;    command not found&#xa;  LPDString: &#xa;    /bin//sh: line 1: &#xa;    default: command not found&#xa;  TLSSessionReq: &#xa;    /bin//sh: line 1: &#xa;    random1random2random3random4&#xa;    such file or directory&#xa;  TerminalServerCookie: &#xa;    /bin//sh: line 1: &#xa;    Cookie:: command not found"><elem key="FourOhFourRequest, GetRequest">&#xa;    Can&apos;t ignore signal CHLD, forcing to default.</elem>
+<elem key="GenericLines">&#xa;    /bin//sh: line 1: &#xa;    command not found&#xa;    /bin//sh: line 2: &#xa;    command not found</elem>
+<elem key="HTTPOptions, RTSPRequest">&#xa;    /bin//sh: line 1: OPTIONS: command not found&#xa;    /bin//sh: line 2: &#xa;    command not found</elem>
+<elem key="Help">&#xa;    /bin//sh: line 1: HELP&#xa;    command not found</elem>
+<elem key="Kerberos">&#xa;    /bin//sh: line 1: qj&#xa;    command not found</elem>
+<elem key="LDAPSearchReq">&#xa;    /bin//sh: line 1: 0&#xa;    command not found&#xa;    /bin//sh: line 2: &#xa;    command not found</elem>
+<elem key="LPDString">&#xa;    /bin//sh: line 1: &#xa;    default: command not found</elem>
+<elem key="TLSSessionReq">&#xa;    /bin//sh: line 1: &#xa;    random1random2random3random4&#xa;    such file or directory</elem>
+<elem key="TerminalServerCookie">&#xa;    /bin//sh: line 1: &#xa;    Cookie:: command not found</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="udp" portid="33852"/>
+<osmatch name="Kyocera CopyStar CS-2560 printer" accuracy="96" line="42256">
+<osclass type="printer" vendor="Kyocera" osfamily="embedded" accuracy="96"><cpe>cpe:/h:kyocera:cs-2560</cpe></osclass>
+</osmatch>
+<osmatch name="Tomato 1.27 - 1.28 (Linux 2.4.20)" accuracy="94" line="46890">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.4.20</cpe></osclass>
+</osmatch>
+<osmatch name="AVM FRITZ!Box FON WLAN 7170 WAP" accuracy="94" line="8860">
+<osclass type="WAP" vendor="AVM" osfamily="embedded" accuracy="94"><cpe>cpe:/h:avm:fritz%21box_fon_wlan_7170</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.4.21 (embedded)" accuracy="94" line="46238">
+<osclass type="specialized" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.4.21</cpe></osclass>
+</osmatch>
+<osmatch name="Dell Integrated Remote Access Controller (iDRAC)" accuracy="93" line="21759">
+<osclass type="remote management" vendor="Dell" osfamily="embedded" accuracy="93"/>
+</osmatch>
+<osmatch name="Dell Remote Access Controller 5/I (DRAC 5/I)" accuracy="93" line="22098">
+<osclass type="remote management" vendor="Dell" osfamily="embedded" accuracy="93"><cpe>cpe:/h:dell:remote_access_card:5</cpe></osclass>
+</osmatch>
+<osmatch name="Extreme Networks ExtremeXOS 12.5.4" accuracy="93" line="24973">
+<osclass type="switch" vendor="Extreme Networks" osfamily="ExtremeXOS" osgen="12.X" accuracy="93"><cpe>cpe:/o:extremenetworks:extremexos:12.5.4</cpe></osclass>
+</osmatch>
+<osmatch name="Extreme Networks ExtremeXOS 15.3" accuracy="93" line="25069">
+<osclass type="switch" vendor="Extreme Networks" osfamily="ExtremeXOS" osgen="15.X" accuracy="93"><cpe>cpe:/o:extremenetworks:extremexos:15.3</cpe></osclass>
+</osmatch>
+<osmatch name="Google Mini search appliance" accuracy="93" line="31888">
+<osclass type="specialized" vendor="Google" osfamily="embedded" accuracy="93"/>
+</osmatch>
+<osmatch name="HP 4200 PSA (Print Server Appliance) model J4117A" accuracy="93" line="32605">
+<osclass type="print server" vendor="HP" osfamily="embedded" accuracy="93"/>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.93%E=4%D=11/26%OT=21%CT=%CU=33852%PV=Y%DS=2%DC=T%G=N%TM=63820E32%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=C4%GCD=1%ISR=D7%TI=Z%II=I%TS=7)&#xa;OPS(O1=M54EST11NW0%O2=M54EST11NW0%O3=M54ENNT11NW0%O4=M54EST11NW0%O5=M54EST11NW0%O6=M54EST11)&#xa;WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)&#xa;ECN(R=Y%DF=Y%T=40%W=16D0%O=M54ENNSNW0%CC=N%Q=)&#xa;T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="171338" lastboot="Thu Nov 24 08:26:00 2022"/>
+<distance value="2"/>
+<tcpsequence index="196" difficulty="Good luck!" values="F5F0D091,F54DF206,F623EC39,F58BE143,F6363C40,F549D6D4"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="105493D,1054947,1054952,105495C,1054966,1054970"/>
+<hostscript><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 7962/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 38233/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 52029/udp): CLEAN (Failed to receive data)&#xa;  Check 4 (port 34039/udp): CLEAN (Failed to receive data)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="nbstat" output="NetBIOS name: TOPHAT, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 000000000000 (Xerox)&#xa;Names:&#xa;  TOPHAT&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  TOPHAT&lt;03&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  TOPHAT&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  MYGROUP&lt;00&gt;          Flags: &lt;group&gt;&lt;active&gt;&#xa;  MYGROUP&lt;1e&gt;          Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  0000000000000000000000000000000000&#xa;  0000000000000000000000000000000000&#xa;  0000000000000000000000000000"/><script id="clock-skew" output="mean: 1h00m09s, deviation: 0s, median: 1h00m09s"><elem key="stddev">0</elem>
+<elem key="mean">3609</elem>
+<elem key="median">3609</elem>
+<elem key="count">2</elem>
+</script></hostscript><trace port="143" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="17.03"/>
+<hop ttl="2" ipaddr="10.11.1.115" rtt="17.41"/>
+</trace>
+<times srtt="16034" rttvar="790" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1669467698"/>
+<taskend task="NSE" time="1669467698"/>
+<taskbegin task="NSE" time="1669467698"/>
+<taskend task="NSE" time="1669467698"/>
+<taskbegin task="NSE" time="1669467698"/>
+<taskend task="NSE" time="1669467698"/>
+<runstats><finished time="1669467698" timestr="Sat Nov 26 08:01:38 2022" summary="Nmap done at Sat Nov 26 08:01:38 2022; 1 IP address (1 host up) scanned in 274.62 seconds" elapsed="274.62" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

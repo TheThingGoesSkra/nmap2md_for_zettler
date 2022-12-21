@@ -27,6 +27,9 @@ definition = dict(
                 'attribute': 'version'
             }
         )
+    },
+    cpe={
+        'xpath': 'cpe'
     }
 )
 
