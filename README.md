@@ -1,20 +1,24 @@
 # nmap2md
 
-A little utility to convert nmap XML results to markdown tables.
+A little utility to convert nmap XML results to markdown tables for zettler.
 
 ## Usage
 
 Download application, you can use git for it:
 
 ```
-git clone git@github.com:vdjagilev/nmap2md.git
-cd nmap2md
+git clone https://github.com/TheThingGoesSkra/nmap2md_for_zettler
+cd nmap2md_for_zettler
+```
+Launch nmap scan and export results in xml file:
+```
+sudo nmap 10.11.1.0/24 --top-ports=1000 -oX nmap_results.xml
 ```
 
-Example which parses nmap XML and outputs Markdown tables
+Example which parses nmap XML and create subnet tree using markdown files
 
 ```
-./nmap2md.py test.xml
+./nmap2md.py nmap_results.xml
 ```
 
 ## Options
